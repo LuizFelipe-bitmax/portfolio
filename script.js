@@ -1,20 +1,22 @@
 // Lista de Tarefas Simples
 
-// Seleciona os elementos do HTML
+// Seleciona o elemento da seção "projetos"
+const projetosSecao = document.getElementById("projetos");
+
+// Cria input, botão e lista
 const tarefaInput = document.createElement("input");
 const botaoAdicionar = document.createElement("button");
 const lista = document.createElement("ul");
 
-// Configura input e botão
 tarefaInput.placeholder = "Digite sua tarefa";
 botaoAdicionar.textContent = "Adicionar Tarefa";
 
-// Adiciona input, botão e lista na página
-document.getElementById("projetos").appendChild(tarefaInput);
-document.getElementById("projetos").appendChild(botaoAdicionar);
-document.getElementById("projetos").appendChild(lista);
+// Adiciona elementos na seção de projetos
+projetosSecao.appendChild(tarefaInput);
+projetosSecao.appendChild(botaoAdicionar);
+projetosSecao.appendChild(lista);
 
-// Função para adicionar tarefa
+// Função para adicionar tarefas
 botaoAdicionar.addEventListener("click", function() {
     const texto = tarefaInput.value.trim();
     if (texto !== "") {
