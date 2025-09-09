@@ -59,6 +59,24 @@ h2 {
   text-decoration: underline;
 }
 
+/* Lista de tarefas (input e botão criados via JS) */
+#projetos input {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#projetos button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#projetos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
 /* Rodapé */
 footer {
   background: #2c3e50;
