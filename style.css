@@ -1,23 +1,46 @@
-/* Estilo geral */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f9;
-  color: #333;
+  background: #0d0d0d;
+  color: #00ff88;
   line-height: 1.6;
 }
 
-/* Cabeçalho */
 header {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
+  background: #111;
+  color: #00ff88;
   padding: 2rem;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.foto-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00ff88;
+}
+
+.info-container h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.info-container p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
 header nav a {
-  color: white;
+  color: #00ff88;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -27,7 +50,6 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Seções */
 section {
   padding: 2rem;
   max-width: 900px;
@@ -35,23 +57,26 @@ section {
 }
 
 h2 {
-  color: #2c3e50;
+  color: #00ff88;
   margin-bottom: 1rem;
 }
 
-/* Projetos */
 .projeto {
-  background: white;
+  background: #1a1a1a;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.projeto h3 {
+  margin-top: 0;
 }
 
 .projeto a {
   display: inline-block;
   margin-top: 10px;
-  color: #2980b9;
+  color: #00ff88;
   font-weight: bold;
 }
 
@@ -59,29 +84,66 @@ h2 {
   text-decoration: underline;
 }
 
-/* Lista de tarefas (input e botão criados via JS) */
-#projetos input {
+.projeto input {
   padding: 5px;
   margin-top: 10px;
+  border: 1px solid #00ff88;
+  border-radius: 5px;
+  background: #0d0d0d;
+  color: #00ff88;
 }
 
-#projetos button {
+.projeto button {
   padding: 5px 10px;
   margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #00ff88;
+  color: #0d0d0d;
   cursor: pointer;
+  font-weight: bold;
 }
 
-#projetos ul {
+.projeto button:hover {
+  background: #00cc6a;
+}
+
+.projeto ul {
   list-style: none;
   padding: 0;
   margin-top: 10px;
 }
 
-/* Rodapé */
+.projeto li {
+  background: #262626;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projeto li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#contato a {
+  color: #00ff88;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
 footer {
-  background: #2c3e50;
-  color: white;
+  background: #111;
+  color: #00ff88;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  border-top: 1px solid #00ff88;
 }
