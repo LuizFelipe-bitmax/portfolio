@@ -1,1 +1,25 @@
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem 2rem;
+  background: #0d0d0d;
+  color: #00ff88;
+}
+
+header h1 { margin: 0; }
+nav a { color: #00ff88; text-decoration: none; margin-right: 8px; }
+nav a:hover { text-decoration: underline; }
+
+.form-inline { margin: 1rem 0; display:flex; gap:8px; flex-wrap:wrap; }
+.form-inline input, .form-inline select { padding:6px; border-radius:4px; border:1px solid #00ff88; background:#111; color:#00ff88; }
+.form-inline button { background:#00ff88; color:#0d0d0d; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-weight:bold; }
+
+.list { list-style:none; padding:0; margin:0; }
+.list li { background:#1a1a1a; padding:8px; margin-bottom:6px; border-radius:6px; display:flex; justify-content:space-between; align-items:center; }
+.link-delete { color:#ff6b6b; text-decoration:none; margin-left:10px; }
+
+.flashes { list-style:none; padding:0; margin:0 0 1rem 0; }
+.flashes li { padding:8px; border-radius:4px; margin-bottom:6px; }
+.success { background:#083; color:#dfffe6; }
+.error { background:#600; color:#ffdfe6; }
