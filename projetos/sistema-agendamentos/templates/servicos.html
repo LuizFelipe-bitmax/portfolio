@@ -1,1 +1,22 @@
 
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Serviços</h2>
+
+<form action="{{ url_for('add_servico') }}" method="post" class="form-inline">
+  <input name="nome" placeholder="Nome do serviço" required>
+  <input name="duracao" placeholder="Duração (min)" value="60">
+  <button type="submit">Adicionar</button>
+</form>
+
+<ul class="list">
+  {% for s in servicos %}
+    <li>
+      <strong>{{ s.nome }}</strong> — {{ s.duracao }} min
+      <a class="link-delete" href="{{ url_for('delete_servico', id=s.id) }}">[remover]</a>
+    </li>
+  {% else %}
+    <li>Nenhum serviço cadastrado.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
