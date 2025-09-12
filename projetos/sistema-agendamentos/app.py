@@ -1,4 +1,3 @@
-
 import os
 from datetime import datetime, timedelta
 from flask import Flask, render_template, request, redirect, flash, url_for
@@ -25,7 +24,7 @@ class Cliente(db.Model):
 class Servico(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(100), nullable=False)
-    duracao = db.Column(db.Integer, default=60)  
+    duracao = db.Column(db.Integer, default=60)
 
 class Agendamento(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -39,7 +38,6 @@ class Agendamento(db.Model):
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/clientes')
 def listar_clientes():
@@ -68,7 +66,6 @@ def delete_cliente(id):
     flash('Cliente removido', 'success')
     return redirect(url_for('listar_clientes'))
 
-
 @app.route('/servicos')
 def listar_servicos():
     servicos = Servico.query.order_by(Servico.nome).all()
@@ -80,7 +77,7 @@ def add_servico():
     duracao = request.form.get('duracao') or 60
     try:
         duracao = int(duracao)
-    except:
+    except ValueError:
         duracao = 60
     if not nome:
         flash('Nome do serviço é obrigatório', 'error')
@@ -98,7 +95,6 @@ def delete_servico(id):
     db.session.commit()
     flash('Serviço removido', 'success')
     return redirect(url_for('listar_servicos'))
-
 
 @app.route('/agendamentos')
 def listar_agendamentos():
@@ -121,8 +117,8 @@ def conflito_exists(servico_id, inicio, duracao):
 def add_agendamento():
     cliente_id = request.form.get('cliente_id')
     servico_id = request.form.get('servico_id')
-    data = request.form.get('data')  
-    hora = request.form.get('hora') 
+    data = request.form.get('data')
+    hora = request.form.get('hora')
     if not (cliente_id and servico_id and data and hora):
         flash('Todos os campos são obrigatórios', 'error')
         return redirect(url_for('listar_agendamentos'))
@@ -155,4 +151,4 @@ def delete_agendamento(id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='127.0.0.1', port=5000)
