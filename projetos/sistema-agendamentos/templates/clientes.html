@@ -1,1 +1,22 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Clientes</h2>
 
+<form action="{{ url_for('add_cliente') }}" method="post" class="form-inline">
+  <input name="nome" placeholder="Nome" required>
+  <input name="telefone" placeholder="Telefone">
+  <input name="email" placeholder="Email">
+  <button type="submit">Adicionar</button>
+</form>
+
+<ul class="list">
+  {% for c in clientes %}
+    <li>
+      <strong>{{ c.nome }}</strong> — {{ c.telefone }} — {{ c.email }}
+      <a class="link-delete" href="{{ url_for('delete_cliente', id=c.id) }}">[remover]</a>
+    </li>
+  {% else %}
+    <li>Nenhum cliente cadastrado.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
