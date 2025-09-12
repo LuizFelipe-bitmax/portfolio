@@ -1,8 +1,7 @@
-const listaTarefasDiv = document.querySelectorAll('.projeto').forEach(projeto => {
+document.querySelectorAll('.projeto').forEach(projeto => {
   const titulo = projeto.querySelector('h3');
-  if(titulo && titulo.textContent.includes("Lista de Tarefas")) {
 
-
+  if (titulo && titulo.textContent.includes("Lista de Tarefas")) {
     const tarefaInput = document.createElement("input");
     const botaoAdicionar = document.createElement("button");
     const lista = document.createElement("ul");
@@ -10,11 +9,9 @@ const listaTarefasDiv = document.querySelectorAll('.projeto').forEach(projeto =>
     tarefaInput.placeholder = "Digite sua tarefa";
     botaoAdicionar.textContent = "Adicionar Tarefa";
 
-
     projeto.appendChild(tarefaInput);
     projeto.appendChild(botaoAdicionar);
     projeto.appendChild(lista);
-
 
     botaoAdicionar.addEventListener("click", function() {
       const texto = tarefaInput.value.trim();
@@ -30,5 +27,26 @@ const listaTarefasDiv = document.querySelectorAll('.projeto').forEach(projeto =>
         tarefaInput.value = "";
       }
     });
+  }
+
+  if (titulo && titulo.textContent.includes("Sistema de Agendamentos")) {
+    const linkDemo = document.createElement("a");
+    const linkGit = document.createElement("a");
+
+    linkDemo.href = "projetos/sistema-agendamentos/templates/index.html"; // link para demo local (GitHub Pages não roda Flask)
+    linkDemo.textContent = "🌐 Ver Demo";
+    linkDemo.target = "_blank";
+
+    linkGit.href = "https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos";
+    linkGit.textContent = "🔗 Código no GitHub";
+    linkGit.target = "_blank";
+
+    projeto.appendChild(linkDemo);
+    projeto.appendChild(document.createTextNode(" ")); // espaçamento
+    projeto.appendChild(linkGit);
+
+    const aviso = document.createElement("p");
+    aviso.innerHTML = "<em>Obs: Esta aplicação precisa ser rodada localmente (Flask não roda no GitHub Pages).</em>";
+    projeto.appendChild(aviso);
   }
 });
