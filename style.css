@@ -84,7 +84,8 @@ h2 {
   text-decoration: underline;
 }
 
-.projeto input {
+.projeto input, 
+.projeto select {
   padding: 5px;
   margin-top: 10px;
   border: 1px solid #00ff88;
@@ -128,6 +129,13 @@ h2 {
 .projeto li.done {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+.projeto p em {
+  font-size: 0.9rem;
+  color: #ff6b6b;
+  display: block;
+  margin-top: 8px;
 }
 
 #contato a {
