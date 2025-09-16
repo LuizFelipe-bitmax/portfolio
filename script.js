@@ -42,7 +42,7 @@ document.querySelectorAll('.projeto').forEach(projeto => {
     linkGit.target = "_blank";
 
     projeto.appendChild(linkDemo);
-    projeto.appendChild(document.createTextNode(" ")); // espaçamento
+    projeto.appendChild(document.createTextNode(" ")); 
     projeto.appendChild(linkGit);
 
     const aviso = document.createElement("p");
