@@ -33,7 +33,7 @@ document.querySelectorAll('.projeto').forEach(projeto => {
     const linkDemo = document.createElement("a");
     const linkGit = document.createElement("a");
 
-    linkDemo.href = "projetos/sistema-agendamentos/templates/index.html"; // link para demo local (GitHub Pages não roda Flask)
+    linkDemo.href = "projetos/sistema-agendamentos/templates/index.html";
     linkDemo.textContent = "🌐 Ver Demo";
     linkDemo.target = "_blank";
 
