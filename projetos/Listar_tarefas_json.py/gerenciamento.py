@@ -1,14 +1,14 @@
 import json
 
-ARQUIVO = "tasks.json"
+ARQUIVOS = "usuario.json"
 
-def carregar_tarefas():
+def carregar_usuarios():
     try:
-        with open(ARQUIVO,"r",encoding="utf-8") as arquivo:
+        with open(ARQUIVOS,"r",encoding="utf-8") as arquivo:
             return json.load(arquivo)
     except FileNotFoundError:
         return []
     
-def salvar_tarefas(tarefas):
-    with open(ARQUIVO,"w",encoding="utf-8") as arquivo:
-        return json.dump(arquivo,tarefas,indent=4,ensure_ascii=False)
+def salvar_usuarios(usuarios):
+    with open(ARQUIVOS,"w",encoding="utf-8") as arquivo:
+        json.dump(usuarios,arquivo,indent=4,ensure_ascii=False)
