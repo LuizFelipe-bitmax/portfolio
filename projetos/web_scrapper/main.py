@@ -30,7 +30,6 @@ def main():
 
         todos_dados.extend(dados)
 
-        # 🔥 montar próxima URL
         if proxima:
             url = base_url + proxima
         else:
