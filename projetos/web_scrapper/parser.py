@@ -20,9 +20,15 @@ def extrair_dados(html, logger):
                 "autor": autor
             })
 
+        proxima_pagina = soup.select_one(".next a")
+        if proxima_pagina:
+            link = proxima_pagina.get("href")
+        else:
+            link = None
+
         logger.info(f"{len(dados)} itens extraídos")
-        return dados
+        return dados, link
 
     except Exception as erro:
         logger.error(f"Erro ao extrair dados: {erro}")
-        return []
+        return [], None
