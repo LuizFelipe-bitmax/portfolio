@@ -1,34 +1,45 @@
 from scraper import obter_html
 from parser import extrair_dados
 from salvar import salvar_csv
-from logger_config import configurar_log
-
+from logger import configurar_log
 
 def main():
-
     logger = configurar_log()
 
-    url = "http://quotes.toscrape.com"
+    base_url = "http://quotes.toscrape.com"
+    url = base_url
 
-    html  = obter_html(url,logger)
+    todos_dados = []
 
+    logger.info("Iniciando scraper com paginação")
 
-    if html is None:
-        print("Não foi possivel acessar site")
-        return
-    
-    dados = extrair_dados(html,logger)
+    while url:
+        print(f"Acessando: {url}")
 
-    if not dados:
-        print("Nenhum dado encontrado")
-        return
-    
+        html = obter_html(url, logger)
 
-    
-    salvar_csv(dados)
-    
-    logger.info("Bem sucedido")
-    print("Scraper finalizado")
+        if html is None:
+            print("Erro ao acessar o site.")
+            break
+
+        dados, proxima = extrair_dados(html, logger)
+
+        if not dados:
+            print("Nenhum dado encontrado.")
+            break
+
+        todos_dados.extend(dados)
+
+        # 🔥 montar próxima URL
+        if proxima:
+            url = base_url + proxima
+        else:
+            url = None
+
+    salvar_csv(todos_dados)
+
+    logger.info(f"Total coletado: {len(todos_dados)}")
+    print("Scraping finalizado com paginação!")
 
 if __name__ == "__main__":
     main()
