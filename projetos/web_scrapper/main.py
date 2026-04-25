@@ -1,7 +1,7 @@
 from scraper import obter_html
 from parser import extrair_dados
 from salvar import salvar_csv
-from logger import configurar_log
+from logger_config import configurar_log
 
 def main():
     logger = configurar_log()
