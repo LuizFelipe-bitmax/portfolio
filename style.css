@@ -1,174 +1,48 @@
-/* ===== RESET BÁSICO ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* ===== BODY ===== */
 body {
-  background-color: #f5f7fb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
   color: #333;
-  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
 header {
-  background-color: #1f2937;
+  background: #1f2937;
   color: white;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
-  max-width: 1000px;
-  margin: auto;
-  flex-wrap: wrap;
 }
 
-/* FOTO */
 .foto-container img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-}
-
-/* TEXTO HEADER */
-.info-container h1 {
-  font-size: 24px;
-}
-
-.info-container p {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-/* NAV */
-nav {
-  margin-top: 10px;
 }
 
 nav a {
+  margin-right: 10px;
   color: white;
-  margin-right: 15px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== MAIN ===== */
 main {
-  max-width: 1000px;
-  margin: auto;
   padding: 20px;
 }
 
-/* SEÇÕES */
-section {
-  margin-bottom: 40px;
-}
-
-section h2 {
-  margin-bottom: 15px;
-  color: #1f2937;
-  border-left: 5px solid #4f46e5;
-  padding-left: 10px;
-}
-
-/* ===== HABILIDADES ===== */
-#habilidades ul {
-  list-style: none;
-}
-
-#habilidades li {
-  background: white;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* ===== PROJETOS ===== */
 .projeto {
   background: white;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: 0.3s;
 }
 
-.projeto:hover {
-  transform: translateY(-3px);
-}
-
-.projeto h3 {
-  margin-bottom: 10px;
-  color: #111827;
-}
-
-.projeto p {
-  margin-bottom: 8px;
-}
-
-.projeto a {
-  color: #4f46e5;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.projeto a:hover {
-  text-decoration: underline;
-}
-
-/* ===== PROJETO EM DESTAQUE ===== */
-.destaque {
-  border-left: 6px solid #10b981;
-  background: #f0fdf4;
-}
-
-/* lista dentro do destaque */
-.destaque ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.destaque ul li {
-  margin-bottom: 5px;
-}
-
-/* ===== CONTATO ===== */
-#contato a {
-  color: #4f46e5;
-}
-
-/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #1f2937;
+  padding: 10px;
+  background: #1f2937;
   color: white;
-  margin-top: 20px;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 5px;
-  }
 }
