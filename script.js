@@ -30,12 +30,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('section, .projeto-card, .skill-card, .contato-card, .projeto-destaque').forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
-});
+document.querySelectorAll('section, .projeto-card, .skill-card, .contato-card, .projeto-destaque')
+  .forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
 
-// Smooth nav ativo
+// Nav ativo
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
