@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luiz Felipe — Desenvolvedor</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -29,16 +31,22 @@
       <div class="foto-wrap">
         <img src="img/foto.jpeg" alt="Foto de Luiz Felipe">
       </div>
+
       <div class="hero-text">
         <p class="hero-eyebrow">Estudante · UFAM · Manaus — AM</p>
         <h1>Luiz Felipe<br>Gonzaga do Carmo</h1>
-        <p class="hero-sub">Desenvolvedor Python · IoT · Inteligência Artificial</p>
+
+        <p class="hero-sub">
+          Desenvolvedor Backend · Python · APIs · Bancos de Dados
+        </p>
+
         <div class="hero-cta">
           <a href="#projetos" class="btn btn-primary">Ver projetos</a>
           <a href="#contato" class="btn btn-ghost">Contato</a>
         </div>
       </div>
     </div>
+
     <div class="hero-scroll-hint">↓</div>
   </header>
 
@@ -48,11 +56,23 @@
     <section id="sobre">
       <div class="section-inner">
         <span class="section-label">sobre mim</span>
-        <h2>Da Amazônia para o código</h2>
+        <h2>Da Amazônia para o backend</h2>
+
         <div class="sobre-grid">
-          <p>Estudante de Ciência da Computação na UFAM, com experiência em pesquisa e desenvolvimento de soluções envolvendo IoT, automação e análise de dados.</p>
-          <p>Atuei como Pesquisador Júnior no projeto SUPER/UFAM em parceria com a Samsung, trabalhando com sistemas embarcados ESP32, comunicação via MQTT e desenvolvimento de aplicações web e mobile.</p>
-          <p>Tenho grande interesse em backend com Python, automação de processos e IA aplicada à criação de soluções reais.</p>
+          <p>
+            Estudante de Ciência da Computação na UFAM, com foco em desenvolvimento backend,
+            APIs REST e bancos de dados.
+          </p>
+
+          <p>
+            Atuei em projetos acadêmicos e práticos com Python, Flask e FastAPI,
+            desenvolvendo sistemas com autenticação, CRUD e integração com banco de dados.
+          </p>
+
+          <p>
+            Tenho interesse em arquitetura de software, boas práticas de desenvolvimento,
+            automação e construção de APIs escaláveis.
+          </p>
         </div>
       </div>
     </section>
@@ -62,36 +82,42 @@
       <div class="section-inner">
         <span class="section-label">habilidades</span>
         <h2>Stack técnico</h2>
+
         <div class="skills-grid">
           <div class="skill-card">
             <span class="skill-icon">{ }</span>
             <h3>Linguagens</h3>
             <p>Python · Java · C · JavaScript</p>
           </div>
+
           <div class="skill-card">
             <span class="skill-icon">⬡</span>
             <h3>Backend</h3>
-            <p>Flask · APIs REST · SQL · MySQL · PostgreSQL</p>
+            <p>FastAPI · Flask · APIs REST · SQL · PostgreSQL · MySQL</p>
           </div>
+
           <div class="skill-card">
             <span class="skill-icon">◈</span>
-            <h3>IoT</h3>
-            <p>ESP32 · Sensores · MQTT · Sistemas embarcados</p>
+            <h3>Banco de Dados</h3>
+            <p>SQLite · PostgreSQL · Modelagem de dados</p>
           </div>
+
           <div class="skill-card">
             <span class="skill-icon">⌥</span>
             <h3>Ferramentas</h3>
-            <p>Git · GitHub · Docker · VS Code · Android Studio</p>
+            <p>Git · GitHub · Docker · VS Code</p>
           </div>
+
           <div class="skill-card">
             <span class="skill-icon">◎</span>
             <h3>Web</h3>
             <p>HTML · CSS · JavaScript</p>
           </div>
+
           <div class="skill-card">
             <span class="skill-icon">✦</span>
             <h3>Interesses</h3>
-            <p>Inteligência Artificial · Automação · Análise de dados</p>
+            <p>APIs · Arquitetura · Automação · Dados</p>
           </div>
         </div>
       </div>
@@ -101,153 +127,86 @@
     <section id="projetos">
       <div class="section-inner">
         <span class="section-label">projetos</span>
-        <h2>O que estou construindo</h2>
+        <h2>Projetos backend</h2>
 
         <!-- DESTAQUE -->
         <div class="projeto-destaque" id="projeto-mercado">
           <div class="destaque-badge">★ Projeto em destaque</div>
+
           <div class="destaque-body">
             <div class="destaque-info">
               <h3>Mercado API</h3>
-              <p class="destaque-desc">API REST completa para gerenciamento de um mercado — produtos, estoque, pedidos e autenticação. Arquitetura limpa com Flask e PostgreSQL, containerizada com Docker.</p>
+
+              <p class="destaque-desc">
+                API REST completa para gerenciamento de produtos e usuários com autenticação JWT,
+                SQLAlchemy, testes automatizados e arquitetura em camadas.
+              </p>
+
               <div class="tech-tags">
                 <span>Python</span>
-                <span>Flask</span>
-                <span>PostgreSQL</span>
-                <span>Docker</span>
-                <span>REST API</span>
+                <span>FastAPI</span>
+                <span>SQLAlchemy</span>
+                <span>JWT</span>
+                <span>Pytest</span>
               </div>
+
               <div class="destaque-links">
-                <a href="https://github.com/LuizFelipe-bitmax/TP01" target="_blank" class="btn btn-primary btn-sm">GitHub →</a>
+                <a href="https://github.com/LuizFelipe-bitmax/mercado-api" target="_blank" class="btn btn-primary btn-sm">
+                  GitHub →
+                </a>
               </div>
             </div>
+
             <div class="destaque-visual">
               <div class="code-preview">
                 <div class="code-bar">
                   <span></span><span></span><span></span>
-                  <span class="code-filename">app.py</span>
+                  <span class="code-filename">main.py</span>
                 </div>
-                <pre><code><span class="c-kw">from</span> flask <span class="c-kw">import</span> Flask
-<span class="c-kw">from</span> models <span class="c-kw">import</span> db
 
-app = Flask(__name__)
+                <pre><code><span class="c-kw">from</span> fastapi <span class="c-kw">import</span> FastAPI
 
-<span class="c-dec">@app.route</span>(<span class="c-str">'/produtos'</span>)
-<span class="c-kw">def</span> <span class="c-fn">listar_produtos</span>():
-    produtos = Produto.query.all()
-    <span class="c-kw">return</span> jsonify(produtos)</code></pre>
+app = FastAPI()
+
+<span class="c-dec">@app.get</span>(<span class="c-str">"/produtos"</span>)
+<span class="c-kw">def</span> listar():
+    <span class="c-kw">return</span> {"msg": "API funcionando"}</code></pre>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- GRID DE PROJETOS -->
+        <!-- GRID -->
         <div class="projetos-grid">
 
-          <div class="projeto-card" id="projeto-lista">
-            <div class="projeto-top">
-              <span class="proj-icon">☑</span>
-              <div class="proj-links">
-                <a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/lista-de-tarefas" target="_blank" title="GitHub">↗</a>
-              </div>
-            </div>
+          <div class="projeto-card">
             <h3>Lista de Tarefas</h3>
-            <p>Aplicação interativa com HTML, CSS e JS puro. Adicione e marque tarefas como concluídas.</p>
-            <div class="tech-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <div class="task-demo">
-              <div class="task-input-row">
-                <input type="text" id="task-input" placeholder="Nova tarefa...">
-                <button id="task-btn">+</button>
-              </div>
-              <ul id="task-list"></ul>
-            </div>
+            <p>App simples com HTML, CSS e JavaScript.</p>
           </div>
 
           <div class="projeto-card">
-            <div class="projeto-top">
-              <span class="proj-icon">⚡</span>
-              <div class="proj-links">
-                <a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/api-rest-flask" target="_blank" title="GitHub">↗</a>
-              </div>
-            </div>
-            <h3>API REST com Flask</h3>
-            <p>Mini API em Python para cadastro e gerenciamento de usuários. Rodar localmente.</p>
-            <div class="tech-tags">
-              <span>Python</span><span>Flask</span>
-            </div>
+            <h3>API Flask</h3>
+            <p>CRUD de usuários com Flask.</p>
           </div>
 
-          <div class="projeto-card" id="projeto-agenda">
-            <div class="projeto-top">
-              <span class="proj-icon">📅</span>
-              <div class="proj-links">
-                <a href="projetos/sistema-agendamentos/templates/index.html" target="_blank" title="Demo">▶</a>
-                <a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos" target="_blank" title="GitHub">↗</a>
-              </div>
-            </div>
+          <div class="projeto-card">
             <h3>Sistema de Agendamentos</h3>
-            <p>Aplicação web com Flask usando MVC, CRUD completo e validação de horários.</p>
-            <div class="tech-tags">
-              <span>Python</span><span>Flask</span><span>HTML</span><span>CSS</span>
-            </div>
+            <p>API com Flask + validação de horários.</p>
           </div>
 
           <div class="projeto-card">
-            <div class="projeto-top">
-              <span class="proj-icon">📦</span>
-              <div class="proj-links">
-                <a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/controle-estoque" target="_blank" title="GitHub">↗</a>
-              </div>
-            </div>
             <h3>Controle de Estoque</h3>
-            <p>Sistema completo de estoque com Flask e MySQL, com CRUD e painel de gestão.</p>
-            <div class="tech-tags">
-              <span>Python</span><span>Flask</span><span>MySQL</span>
-            </div>
+            <p>Sistema com Flask e MySQL.</p>
           </div>
 
           <div class="projeto-card">
-            <div class="projeto-top">
-              <span class="proj-icon">🗂</span>
-              <div class="proj-links">
-                <a href="https://github.com/LuizFelipe-bitmax/Listar_tarefas_json" target="_blank" title="GitHub">↗</a>
-              </div>
-            </div>
             <h3>Cadastro JSON</h3>
-            <p>Sistema de cadastro de usuários em Python com persistência em arquivos JSON.</p>
-            <div class="tech-tags">
-              <span>Python</span>
-            </div>
+            <p>CRUD em Python com arquivo JSON.</p>
           </div>
 
           <div class="projeto-card">
-            <div class="projeto-top">
-              <span class="proj-icon">🔤</span>
-              <div class="proj-links">
-                <a href="#" title="Em breve">↗</a>
-              </div>
-            </div>
-            <h3>Jogo da Forca</h3>
-            <p>Jogo clássico da forca implementado em Python no terminal.</p>
-            <div class="tech-tags">
-              <span>Python</span>
-            </div>
-          </div>
-
-          <div class="projeto-card">
-            <div class="projeto-top">
-              <span class="proj-icon">📊</span>
-              <div class="proj-links">
-                <a href="#" title="Em breve">↗</a>
-              </div>
-            </div>
             <h3>Analisador de Dados</h3>
-            <p>Projeto de análise e visualização de dados com Pandas.</p>
-            <div class="tech-tags">
-              <span>Python</span><span>Pandas</span>
-            </div>
+            <p>Projeto com Pandas.</p>
           </div>
 
         </div>
@@ -259,34 +218,33 @@ app = Flask(__name__)
       <div class="section-inner">
         <span class="section-label">contato</span>
         <h2>Vamos conversar</h2>
-        <p class="contato-sub">Aberto a oportunidades, colaborações e projetos interessantes.</p>
+
         <div class="contato-grid">
           <a href="mailto:benq.11luizfelipe@gmail.com" class="contato-card">
-            <span class="contato-icon">✉</span>
             <div>
-              <p class="contato-label">Email</p>
-              <p class="contato-val">benq.11luizfelipe@gmail.com</p>
+              <p>Email</p>
+              <p>Contato profissional</p>
             </div>
           </a>
+
           <a href="tel:+5592985842120" class="contato-card">
-            <span class="contato-icon">☎</span>
             <div>
-              <p class="contato-label">Telefone</p>
-              <p class="contato-val">(92) 98584-2120</p>
+              <p>Telefone</p>
+              <p>WhatsApp disponível</p>
             </div>
           </a>
-          <a href="https://linkedin.com/in/luiz-felipe-gonzaga-do-carmo-161186268" target="_blank" class="contato-card">
-            <span class="contato-icon">in</span>
+
+          <a href="https://github.com/LuizFelipe-bitmax" class="contato-card">
             <div>
-              <p class="contato-label">LinkedIn</p>
-              <p class="contato-val">Ver perfil →</p>
+              <p>GitHub</p>
+              <p>Projetos</p>
             </div>
           </a>
-          <a href="https://github.com/LuizFelipe-bitmax" target="_blank" class="contato-card">
-            <span class="contato-icon">⌥</span>
+
+          <a href="https://linkedin.com" class="contato-card">
             <div>
-              <p class="contato-label">GitHub</p>
-              <p class="contato-val">@LuizFelipe-bitmax →</p>
+              <p>LinkedIn</p>
+              <p>Perfil profissional</p>
             </div>
           </a>
         </div>
@@ -296,7 +254,7 @@ app = Flask(__name__)
   </main>
 
   <footer>
-    <p>© 2025 Luiz Felipe Gonzaga do Carmo — Manaus, AM</p>
+    <p>© 2025 Luiz Felipe — Backend Developer</p>
   </footer>
 
   <script src="script.js"></script>
