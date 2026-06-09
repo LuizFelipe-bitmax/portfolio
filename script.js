@@ -1,34 +1,41 @@
+/* =========================
+   LISTA DE TAREFAS
+========================= */
 document.querySelectorAll('.projeto').forEach(projeto => {
   const titulo = projeto.querySelector('h3');
 
   if (titulo && titulo.textContent.includes("Lista de Tarefas")) {
-    const tarefaInput = document.createElement("input");
-    const botaoAdicionar = document.createElement("button");
+    const input = document.createElement("input");
+    const botao = document.createElement("button");
     const lista = document.createElement("ul");
 
-    tarefaInput.placeholder = "Digite sua tarefa";
-    botaoAdicionar.textContent = "Adicionar Tarefa";
+    input.placeholder = "Digite sua tarefa";
+    botao.textContent = "Adicionar";
 
-    projeto.appendChild(tarefaInput);
-    projeto.appendChild(botaoAdicionar);
+    projeto.appendChild(input);
+    projeto.appendChild(botao);
     projeto.appendChild(lista);
 
-    botaoAdicionar.addEventListener("click", function() {
-      const texto = tarefaInput.value.trim();
+    botao.addEventListener("click", () => {
+      const texto = input.value.trim();
+
       if (texto !== "") {
         const item = document.createElement("li");
         item.textContent = texto;
 
-        item.addEventListener("click", function() {
+        item.addEventListener("click", () => {
           item.classList.toggle("done");
         });
 
         lista.appendChild(item);
-        tarefaInput.value = "";
+        input.value = "";
       }
     });
   }
 
+  /* =========================
+     SISTEMA DE AGENDAMENTOS
+  ========================= */
   if (titulo && titulo.textContent.includes("Sistema de Agendamentos")) {
     const linkDemo = document.createElement("a");
     const linkGit = document.createElement("a");
@@ -38,15 +45,19 @@ document.querySelectorAll('.projeto').forEach(projeto => {
     linkDemo.target = "_blank";
 
     linkGit.href = "https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos";
-    linkGit.textContent = "🔗 Código no GitHub";
+    linkGit.textContent = "🔗 GitHub";
     linkGit.target = "_blank";
 
+    const espaco = document.createTextNode(" ");
+
     projeto.appendChild(linkDemo);
-    projeto.appendChild(document.createTextNode(" ")); 
+    projeto.appendChild(espaco);
     projeto.appendChild(linkGit);
 
     const aviso = document.createElement("p");
-    aviso.innerHTML = "<em>Obs: Esta aplicação precisa ser rodada localmente (Flask não roda no GitHub Pages).</em>";
+    aviso.innerHTML =
+      "<em>Obs: projeto Flask precisa ser executado localmente.</em>";
+
     projeto.appendChild(aviso);
   }
 });
