@@ -1,82 +1,128 @@
-body {
-  font-family: Arial, sans-serif;
+/* ===== RESET BÁSICO ===== */
+* {
   margin: 0;
   padding: 0;
-  background: #0d0d0d;
-  color: #00ff88;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: #f5f7fb;
+  color: #333;
   line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header {
-  background: #111;
-  color: #00ff88;
-  padding: 2rem;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
+/* FOTO */
 .foto-container img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 3px solid #00ff88;
+  object-fit: cover;
+  border: 3px solid white;
 }
 
+/* TEXTO HEADER */
 .info-container h1 {
-  margin: 0;
-  font-size: 2rem;
+  font-size: 24px;
 }
 
 .info-container p {
-  margin: 0.5rem 0;
-  font-weight: bold;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
-header nav a {
-  color: #00ff88;
-  margin: 0 15px;
+/* NAV */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
-header nav a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-section {
-  padding: 2rem;
-  max-width: 900px;
+/* ===== MAIN ===== */
+main {
+  max-width: 1000px;
   margin: auto;
+  padding: 20px;
 }
 
-h2 {
-  color: #00ff88;
-  margin-bottom: 1rem;
+/* SEÇÕES */
+section {
+  margin-bottom: 40px;
 }
 
+section h2 {
+  margin-bottom: 15px;
+  color: #1f2937;
+  border-left: 5px solid #4f46e5;
+  padding-left: 10px;
+}
+
+/* ===== HABILIDADES ===== */
+#habilidades ul {
+  list-style: none;
+}
+
+#habilidades li {
+  background: white;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===== PROJETOS ===== */
 .projeto {
-  background: #1a1a1a;
-  padding: 1rem;
-  margin: 1rem 0;
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.projeto:hover {
+  transform: translateY(-3px);
 }
 
 .projeto h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.projeto p {
+  margin-bottom: 8px;
 }
 
 .projeto a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #00ff88;
+  color: #4f46e5;
+  text-decoration: none;
   font-weight: bold;
 }
 
@@ -84,74 +130,45 @@ h2 {
   text-decoration: underline;
 }
 
-.projeto input,
-.projeto select {
-  padding: 5px;
+/* ===== PROJETO EM DESTAQUE ===== */
+.destaque {
+  border-left: 6px solid #10b981;
+  background: #f0fdf4;
+}
+
+/* lista dentro do destaque */
+.destaque ul {
   margin-top: 10px;
-  border: 1px solid #00ff88;
-  border-radius: 5px;
-  background: #0d0d0d;
-  color: #00ff88;
+  padding-left: 20px;
 }
 
-.projeto button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  border: none;
-  border-radius: 5px;
-  background: #00ff88;
-  color: #0d0d0d;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.projeto button:hover {
-  background: #00cc6a;
-}
-
-.projeto ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.projeto li {
-  background: #262626;
+.destaque ul li {
   margin-bottom: 5px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
 }
 
-.projeto li.done {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
-.projeto p em {
-  font-size: 0.9rem;
-  color: #ff6b6b;
-  display: block;
-  margin-top: 8px;
-}
-
+/* ===== CONTATO ===== */
 #contato a {
-  color: #00ff88;
-  text-decoration: none;
+  color: #4f46e5;
 }
 
-#contato a:hover {
-  text-decoration: underline;
-}
-
+/* ===== FOOTER ===== */
 footer {
-  background: #111;
-  color: #00ff88;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  border-top: 1px solid #00ff88;
+  padding: 15px;
+  background-color: #1f2937;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
 }
