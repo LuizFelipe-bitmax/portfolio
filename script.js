@@ -1,6 +1,3 @@
-/* =========================
-   LISTA DE TAREFAS
-========================= */
 document.querySelectorAll('.projeto').forEach(projeto => {
   const titulo = projeto.querySelector('h3');
 
@@ -33,31 +30,20 @@ document.querySelectorAll('.projeto').forEach(projeto => {
     });
   }
 
-  /* =========================
-     SISTEMA DE AGENDAMENTOS
-  ========================= */
   if (titulo && titulo.textContent.includes("Sistema de Agendamentos")) {
     const linkDemo = document.createElement("a");
     const linkGit = document.createElement("a");
 
     linkDemo.href = "projetos/sistema-agendamentos/templates/index.html";
-    linkDemo.textContent = "🌐 Ver Demo";
+    linkDemo.textContent = "Ver Demo";
     linkDemo.target = "_blank";
 
     linkGit.href = "https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos";
-    linkGit.textContent = "🔗 GitHub";
+    linkGit.textContent = "GitHub";
     linkGit.target = "_blank";
 
-    const espaco = document.createTextNode(" ");
-
     projeto.appendChild(linkDemo);
-    projeto.appendChild(espaco);
+    projeto.appendChild(document.createTextNode(" "));
     projeto.appendChild(linkGit);
-
-    const aviso = document.createElement("p");
-    aviso.innerHTML =
-      "<em>Obs: projeto Flask precisa ser executado localmente.</em>";
-
-    projeto.appendChild(aviso);
   }
 });
