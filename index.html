@@ -1,135 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Luiz Felipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+
+    <div class="foto-container">
+      <img src="img/foto.jpeg" alt="Foto de Luiz Felipe">
+    </div>
+
+    <div class="info-container">
+      <h1>Luiz Felipe Gonzaga do Carmo</h1>
+      <p>Estudante de Ciência da Computação | Desenvolvedor Python | IoT e Inteligência Artificial</p>
+      <p>📍 Manaus - AM | 🎓 Universidade Federal do Amazonas (UFAM)</p>
+
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<section id="sobre">
+<h2>Sobre mim</h2>
+
+<p>
+Sou estudante de Ciência da Computação na Universidade Federal do Amazonas (UFAM),
+com experiência em pesquisa e desenvolvimento de soluções tecnológicas envolvendo
+Internet das Coisas (IoT), automação de processos e análise de dados.
+</p>
+
+<p>
+Atuei como Pesquisador Júnior no projeto SUPER/UFAM em parceria com a Samsung,
+trabalhando com sistemas embarcados utilizando ESP32, comunicação de dados via MQTT
+e desenvolvimento de aplicações web e mobile.
+</p>
+
+<p>
+Tenho grande interesse em desenvolvimento backend com Python, automação de processos
+e Inteligência Artificial aplicada à criação de soluções tecnológicas.
+</p>
+
+</section>
+
+<section id="habilidades">
+
+<h2>Habilidades</h2>
+
+<ul>
+
+<li><strong>Linguagens:</strong> Python, Java, C, JavaScript</li>
+
+<li><strong>Desenvolvimento Web:</strong> HTML, CSS</li>
+
+<li><strong>Backend:</strong> Flask, APIs REST</li>
+
+<li><strong>Banco de Dados:</strong> MySQL, PostgreSQL, SQL</li>
+
+<li><strong>IoT:</strong> ESP32, sensores, MQTT</li>
+
+<li><strong>Ferramentas:</strong> Git, GitHub, VS Code, Android Studio, Docker</li>
+
+<li><strong>Conceitos:</strong> Lógica de programação, Orientação a Objetos, Estruturas de Dados</li>
+
+<li><strong>Áreas de interesse:</strong> Inteligência Artificial, automação de processos e análise de dados</li>
+
+</ul>
+
+</section>
+
 <section id="projetos">
 
 <h2>Projetos</h2>
 
-<!-- 🔥 PROJETO EM DESTAQUE -->
-<div class="projeto destaque">
-
-<h3>🚀 Mercado API (Projeto em Destaque)</h3>
-
-<p>
-API REST completa desenvolvida com FastAPI para gerenciamento de produtos e usuários, com autenticação JWT, arquitetura em camadas e testes automatizados.
-</p>
-
-<p>
-Projeto focado em boas práticas de backend, segurança, escalabilidade e organização de código.
-</p>
-
-<p><strong>Tecnologias:</strong> Python, FastAPI, SQLAlchemy, SQLite, JWT, Pytest, GitHub Actions</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/mercado-api" target="_blank">
-🔗 Ver código no GitHub
-</a>
-
-<p><strong>Destaques:</strong></p>
-<ul>
-  <li>Autenticação e autorização com JWT</li>
-  <li>CRUD completo de produtos</li>
-  <li>Arquitetura em camadas (services, routes, models)</li>
-  <li>Filtros, paginação e busca</li>
-  <li>Testes automatizados com Pytest</li>
-  <li>CI/CD com GitHub Actions</li>
-</ul>
-
-</div>
-
-<!-- PROJETOS ANTIGOS -->
 <div class="projeto">
-
 <h3>Lista de Tarefas</h3>
 <p>Aplicação simples de lista de tarefas feita com HTML, CSS e JavaScript.</p>
 <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/lista-de-tarefas" target="_blank">
-🔗 Código no GitHub
-</a>
-
+<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/lista-de-tarefas" target="_blank">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
 <h3>API REST com Flask</h3>
 <p>Mini API em Python para cadastro de usuários.</p>
 <p><strong>Tecnologias:</strong> Python, Flask</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/api-rest-flask" target="_blank">
-🔗 Código no GitHub
-</a>
-
-<p><em>Obs: Projeto precisa ser rodado localmente.</em></p>
-
+<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/api-rest-flask" target="_blank">🔗 Código no GitHub</a>
+<p><em>Obs: Essa API precisa ser rodada localmente.</em></p>
 </div>
 
 <div class="projeto">
-
 <h3>Sistema de Agendamentos</h3>
-<p>Aplicação web com Flask usando MVC, CRUD e validação de horários.</p>
+<p>Aplicação web com Flask demonstrando MVC, CRUD e validação de horários.</p>
 <p><strong>Tecnologias:</strong> Python, Flask, HTML, CSS</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos" target="_blank">
-🔗 Código no GitHub
-</a>
-
+<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/sistema-agendamentos" target="_blank">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
 <h3>Controle de Estoque</h3>
-<p>Sistema com Flask e MySQL com relacionamento entre tabelas.</p>
+<p>Sistema de controle de estoque com Flask e MySQL.</p>
 <p><strong>Tecnologias:</strong> Python, Flask, MySQL</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/controle-estoque" target="_blank">
-🔗 Código no GitHub
-</a>
-
+<a href="https://github.com/LuizFelipe-bitmax/portfolio/tree/main/projetos/controle-estoque" target="_blank">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
-<h3>Amazon TP01 (Banco de Dados)</h3>
-<p>Projeto com PostgreSQL, Python e Docker para análise de dados.</p>
+<h3>TP01 PostgreSQL/Docker</h3>
+<p>Projeto com PostgreSQL, Python e Docker.</p>
 <p><strong>Tecnologias:</strong> Python, PostgreSQL, Docker</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/TP01" target="_blank">
-🔗 Código no GitHub
-</a>
-
+<a href="https://github.com/LuizFelipe-bitmax/TP01" target="_blank">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
-<h3>Sistema de Cadastro (JSON)</h3>
-<p>Sistema em Python com persistência em JSON.</p>
+<h3>Sistema de Cadastro JSON</h3>
+<p>Cadastro de usuários em Python com JSON.</p>
 <p><strong>Tecnologias:</strong> Python</p>
-
-<a href="https://github.com/LuizFelipe-bitmax/Listar_tarefas_json" target="_blank">
-🔗 Código no GitHub
-</a>
-
+<a href="https://github.com/LuizFelipe-bitmax/Listar_tarefas_json" target="_blank">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
 <h3>Jogo da Forca</h3>
-<p>Jogo clássico da forca em Python via terminal.</p>
+<p>Jogo em Python.</p>
 <p><strong>Tecnologias:</strong> Python</p>
-
-<a href="#">
-🔗 Código no GitHub
-</a>
-
+<a href="#">🔗 Código no GitHub</a>
 </div>
 
 <div class="projeto">
-
-<h3>Analisador de Dados com Pandas</h3>
-<p>Ferramenta de análise de dados usando Pandas.</p>
+<h3>Analisador de Dados</h3>
+<p>Projeto com Pandas.</p>
 <p><strong>Tecnologias:</strong> Python, Pandas</p>
-
-<a href="#">
-🔗 Código no GitHub
-</a>
-
+<a href="#">🔗 Código no GitHub</a>
 </div>
 
 </section>
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<p>Email: <a href="mailto:benq.11luizfelipe@gmail.com">benq.11luizfelipe@gmail.com</a></p>
+
+<p>Telefone: (92) 98584-2120</p>
+
+<p>LinkedIn:
+<a href="https://linkedin.com/in/luiz-felipe-gonzaga-do-carmo-161186268" target="_blank">Perfil</a>
+</p>
+
+<p>GitHub:
+<a href="https://github.com/LuizFelipe-bitmax" target="_blank">Perfil</a>
+</p>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2025 - Portfólio de Luiz Felipe</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
